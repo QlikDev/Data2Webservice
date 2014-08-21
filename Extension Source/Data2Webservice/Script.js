@@ -404,7 +404,7 @@ function Data2Webservice_Init() {
                 $.ajax({
                     type: "POST",
                     url: webServiceUrl,
-                    data: "{'qvDataTable':" + JSON.stringify(obj) + "}",
+                    data: JSON.stringify({ qvDataTable: obj }),
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (msg) {
